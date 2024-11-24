@@ -6,7 +6,7 @@ const Assignment = require('../models/Assignment'); // Ensure the correct path t
 router.get('/', async (req, res) => {
   try {
     const assignments = await Assignment.find().sort({ dueDate: 1 }); // Sort by due date ascending
-    res.render('index', { assignments }); // Pass assignments to the view
+    res.render('assignments/index', { assignments }); // Updated to point to assignments/index.ejs
   } catch (err) {
     console.error('Error fetching assignments:', err.message);
     res.status(500).send('Server Error');
@@ -91,5 +91,6 @@ router.delete('/:id', async (req, res) => {
 });
 
 module.exports = router;
+
 
 
