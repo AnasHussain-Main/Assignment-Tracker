@@ -20,13 +20,14 @@ app.set('view engine', 'ejs');
 
 // Routes
 app.get('/', (req, res) => {
-  res.redirect('/assignments'); // Redirect root URL to `/assignments`
+  res.render('splash'); // Render the splash page as the root
 });
 app.use('/assignments', assignmentRouter); // Mount assignmentRouter for `/assignments`
 
 // Start the server
 const PORT = process.env.PORT || 3000; // Default to port 3000 or use environment variable
 app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`));
+
 
 
 
