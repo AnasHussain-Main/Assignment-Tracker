@@ -2,7 +2,18 @@ const express = require('express');
 const router = express.Router();
 const Assignment = require('../models/Assignment'); // Ensure the correct path to the model
 
-// Get all assignments
+// Get the Assignments Collection
+router.get('/collection', async (req, res) => {
+  try {
+    const assignments = await Assignment.find().sort({ dueDate: 1 }); // Sort by due date ascending
+    res.render('assignments/collection', { assignments }); // Render the collection.ejs file
+  } catch (err) {
+    console.error('Error fetching assignments for collection:', err.message);
+    res.status(500).send('Server Error');
+  }
+});
+
+// Get all assignments (for the index page)
 router.get('/', async (req, res) => {
   try {
     const assignments = await Assignment.find().sort({ dueDate: 1 }); // Sort by due date ascending
@@ -29,7 +40,7 @@ router.get('/:id/edit', async (req, res) => {
   }
 });
 
-// Add a new assignment directly in the index.ejs form (No separate /new route required)
+// Add a new assignment directly in the index.ejs form
 router.post('/', async (req, res) => {
   const { title, description, dueDate } = req.body;
 
@@ -91,6 +102,7 @@ router.delete('/:id', async (req, res) => {
 });
 
 module.exports = router;
+
 
 
 
