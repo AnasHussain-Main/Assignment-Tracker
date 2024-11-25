@@ -1,58 +1,53 @@
 <%- include('../partials/header') %>
 
-<h2>Add Your Assignments below!</h2>
+<main>
+    <h2>Add Your Assignments below!</h2>
 
-<!-- Form to Add a New Assignment -->
-<section>
-  <h3>Add New Assignment</h3>
-  <form action="/assignments" method="POST" style="max-width: 600px; margin: 20px auto;">
-    <label for="title">Title:</label>
-    <input
-      type="text"
-      id="title"
-      name="title"
-      required
-      placeholder="Enter assignment title"
-      style="width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 5px;"
-    >
+    <!-- Form to Add a New Assignment -->
+    <section class="main">
+        <form action="/assignments" method="POST">
+            <label for="title">Title:</label>
+            <input
+                type="text"
+                id="title"
+                name="title"
+                required
+                placeholder="Enter assignment title"
+            >
 
-    <label for="description">Description:</label>
-    <textarea
-      id="description"
-      name="description"
-      required
-      placeholder="Enter assignment description"
-      style="width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 5px;"
-    ></textarea>
+            <label for="description">Description:</label>
+            <textarea
+                id="description"
+                name="description"
+                required
+                placeholder="Enter assignment description"
+            ></textarea>
 
-    <label for="dueDate">Due Date:</label>
-    <input
-      type="date"
-      id="dueDate"
-      name="dueDate"
-      required
-      style="width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 5px;"
-    >
+            <label for="dueDate">Due Date:</label>
+            <input
+                type="date"
+                id="dueDate"
+                name="dueDate"
+                required
+            >
 
-    <button
-      type="submit"
-      style="background-color: #007BFF; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; margin-top: 10px;"
-    >
-      Add Assignment
-    </button>
-  </form>
-</section>
+            <button type="submit">
+                Add Assignment
+            </button>
+        </form>
+    </section>
 
-<!-- Link to Collection Page -->
-<section style="text-align: center; margin: 30px;">
-  <a href="/assignments/collection" style="text-decoration: none;">
-    <button style="background-color: #28A745; color: white; border: none; padding: 15px 30px; border-radius: 5px; font-size: 18px; cursor: pointer;">
-      View Assignment Collection
-    </button>
-  </a>
-</section>
+    <!-- Link to Collection Page -->
+    <section class="collection-button">
+        <a href="/assignments/collection">
+            <button>
+                View Assignment Collection
+            </button>
+        </a>
+    </section>
+</main>
 
-<%- include('../partials/footer') %>
+
 
 
 
