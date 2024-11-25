@@ -7,3 +7,5 @@ The website will have a splash page, furthermore a page where the user inputs th
 
 The main page will follow the following display: 
 
+![Visual Of Site](public/images/visual.png)
+
