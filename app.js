@@ -1,9 +1,9 @@
-require('dotenv').config(); // Load environment variables
+require('dotenv').config(); 
 const express = require('express');
 const methodOverride = require('method-override');
 const path = require('path');
-const connectDB = require('./Config/db'); // Ensure capitalization matches your file structure
-const assignmentRouter = require('./routes/assignment'); // Adjust to match your renamed `routes/assignment.js`
+const connectDB = require('./config/db'); 
+const assignmentRouter = require('./routes/assignment'); 
 
 const app = express();
 
