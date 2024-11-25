@@ -25,7 +25,7 @@ app.get('/', (req, res) => {
 app.use('/assignments', assignmentRouter); // Mount assignmentRouter for `/assignments`
 
 // Start the server
-const PORT = process.env.PORT || 3000; // Default to port 3000 or use environment variable
+const PORT = process.env.PORT || 3000; // Default to port 3000 (Yay!)
 app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`));
 
 

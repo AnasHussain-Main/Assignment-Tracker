@@ -1,3 +1,6 @@
+// This file serves as the assignment schema. 
+//Defines the structures of the data to be stored in assignment collection
+
 const mongoose = require('mongoose');
 
 const AssignmentSchema = new mongoose.Schema({
