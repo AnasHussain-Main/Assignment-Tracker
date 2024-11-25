@@ -1,0 +1,25 @@
+<%- include('../partials/header') %>
+
+<h2>Assignment Collection</h2>
+
+<!-- List of Assignments -->
+<section>
+  <h3>All Assignments</h3>
+  <% if (assignments.length > 0) { %>
+    <ul style="max-width: 600px; margin: 20px auto; padding: 0; list-style-type: none;">
+      <% assignments.forEach(assignment => { %>
+        <li
+          style="background: #f9f9f9; border: 1px solid #ccc; padding: 15px; margin-bottom: 10px; border-radius: 5px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);"
+        >
+          <strong>Title:</strong> <%= assignment.title %><br>
+          <strong>Description:</strong> <%= assignment.description %><br>
+          <strong>Due Date:</strong> <%= assignment.dueDate.toDateString() %><br>
+        </li>
+      <% }) %>
+    </ul>
+  <% } else { %>
+    <p style="text-align: center; color: #555;">No assignments found in the collection.</p>
+  <% } %>
+</section>
+
+<%- include('../partials/footer') %>
