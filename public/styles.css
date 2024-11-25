@@ -216,6 +216,93 @@ hr {
     background-color: #218838;
 }
 
+/* General Styling for Collection Page */
+.collection-page {
+    padding-top: 100px; /* Account for fixed header */
+    text-align: center;
+}
+
+.collection-page h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Assignment List Styling */
+.assignment-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px auto;
+    max-width: 700px;
+}
+
+.assignment-card {
+    background: white;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease; 
+}
+
+.assignment-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.assignment-card p {
+    margin: 10px 0;
+    font-size: 16px;
+    color: #555;
+}
+
+.assignment-card strong {
+    color: #333;
+}
+
+/* Buttons Styling */
+.assignment-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.assignment-buttons button {
+    padding: 8px 16px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.edit-button {
+    background-color: #FFC107;
+    color: white;
+}
+
+.edit-button:hover {
+    background-color: #e0a800;
+}
+
+.delete-button {
+    background-color: red;
+    color: white;
+}
+
+.delete-button:hover {
+    background-color: darkred;
+}
+
+/* No Assignments Message */
+.no-assignments {
+    color: #555;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+
 /* Footer Styling */
 footer {
     text-align: center;
@@ -224,6 +311,69 @@ footer {
     margin-top: auto;
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
 }
+
+/* Edit Page Styling */
+.edit-page {
+    padding-top: 100px; /* Account for the fixed header */
+    text-align: center;
+}
+
+.edit-page h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Edit Form Styling */
+.edit-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.edit-form label {
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.edit-form input,
+.edit-form textarea {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.edit-form input:focus,
+.edit-form textarea:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+.edit-form button.update-button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 15px 20px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.edit-form button.update-button:hover {
+    background-color: #0056b3;
+}
+
 
 
   
